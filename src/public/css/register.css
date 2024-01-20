@@ -1,0 +1,92 @@
+.contact-form__content {
+    margin: 0 auto;
+    background-color: #F2F2F2;
+    padding: 30px 15px;
+    max-width: 1800px;
+    height: 100vh;
+
+}
+
+.contact-form__heading {
+    margin-bottom: 40px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+.form {
+    margin: 0 auto;
+    width: 70%;
+    text-align: center;
+}
+
+.form__group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form__group-content {
+    text-align: center;
+}
+
+.form__error {
+    height: 20px;
+    color: #ff0000;
+    text-align: left;
+}
+
+.form__input--text input,
+.form__input--textarea textarea {
+    padding: 10px;
+    width: 300px;
+    border: 2px solid #929292;
+    border-radius: 3px;
+    font-size: 15px;
+    appearance: none;
+}
+
+.form__input--text {
+    display: flex;
+    text-align: center;
+}
+
+.form__input--text input {
+    height: 40px;
+    margin-top: 20px;
+    background-color: #F2F2F2;
+}
+
+.form__input--textarea textarea {
+    height: 180px;
+}
+
+.form__button {
+    margin-top: 20px;
+}
+
+.form__button-submit {
+    padding: 10px;
+    width: 300px;
+    height: 40px;
+    border: none;
+    border-radius: 3px;
+    background: #2C4AD8;
+    font-size: 15px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.login__link {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.login__message {
+    color: #989898;
+}
+
+.login__button-submit {
+    color: #2C4AD8;
+    text-decoration: none;
+    margin-bottom: 100px;
+}

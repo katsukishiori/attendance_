@@ -1,0 +1,31 @@
+.header {
+    background-color: #fff;
+}
+
+.header__inner {
+    margin: 0 auto;
+    padding: 20px 15px;
+    max-width: 1230px;
+}
+
+.header__logo {
+    color: #000;
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.small__bottom {
+    margin: 0 auto;
+    padding: 10px;
+    max-width: 1230px;
+    height: 30px;
+    text-align: center;
+}
+
+.small__bottom--message {
+    max-width: 1230px;
+    font-size: 15px;
+}

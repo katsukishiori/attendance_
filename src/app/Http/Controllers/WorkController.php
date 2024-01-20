@@ -6,13 +6,21 @@ use Illuminate\Http\Request;
 
 class WorkController extends Controller
 {
+     public function index()
+    {
+        return view('work');
+    }
+
+
+
+
     public function create()
     {
-        return view('/');
+        return view('work');
     }
 
     public function store()
     {
-        return view('/');
+        return view('work');
     }
 }

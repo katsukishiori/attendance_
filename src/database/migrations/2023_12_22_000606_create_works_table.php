@@ -15,10 +15,9 @@ class CreateWorksTable extends Migration
     {
         Schema::create('works', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained();
             $table->datetime('work_start');
             $table->datetime('work_end');
-            $table->datetime('break_start');
-            $table->datetime('break_end');
             $table->timestamps();
         });
     }
@@ -30,6 +29,13 @@ class CreateWorksTable extends Migration
      */
     public function down()
     {
+
+        // Schema::table('users', function (Blueprint $table) {
+        //     // マイグレーションのロールバック時に user_id カラムと外部キー制約を削除
+        //     $table->dropForeign(['user_id']);
+        //     $table->dropColumn('user_id');
+        // });
+
         Schema::dropIfExists('works');
     }
 }

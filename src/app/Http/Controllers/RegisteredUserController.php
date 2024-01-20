@@ -2,17 +2,40 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Http\Requests\RegisterRequest;
+use App\Models\User;
+use Illuminate\Support\Facades\Hash;
+
 
 class RegisteredUserController extends Controller
 {
-    public function create()
+
+    public function index()
     {
-        return view('register');
+        $users = User::all();
+        return view('login', ['users' => $users]);
+        
     }
 
-    public function store()
+    public function create()
     {
-        return view('register');
+        return view('auth.register');
+    }
+
+    public function store(RegisterRequest $request)
+    {
+        $user = User::create([
+            "name" => $request->input("name"),
+            "email" => $request->input("email"),
+            "password" => Hash::make($request->input("password")),
+        ]);
+        //$users = $request->only(['name', 'email', 'password', 'password_confirmation']);
+       // "password"=>Hash::make($req->input("password")),
+        //User::create($user);
+       
+        return redirect('/login');
+
     }
 }
+
+
